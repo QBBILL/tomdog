@@ -5,31 +5,24 @@ package cn.qbbill.connector.http;
  *  The HttpRequestImpl class employs a pool of HttpHeader objects for performance
  *  These two classes will be explained in Chapter 4.
  */
-import ex03.pyrmont.connector.RequestStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.Cookie;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletInputStream;
-import java.security.Principal;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.UnsupportedEncodingException;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+
+import cn.qbbill.connector.RequestStream;
 import org.apache.catalina.util.Enumerator;
 import org.apache.catalina.util.ParameterMap;
 import org.apache.catalina.util.RequestUtil;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.io.*;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.security.Principal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class HttpRequest implements HttpServletRequest {
 
